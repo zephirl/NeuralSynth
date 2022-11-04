@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Audio</title>
+    </head>
+
+
+    <body>
+        <h1>Audio Testing</h1>
+
+        <label for="volume">Volume</label>
+        <input type="range" list="tickmarks" id="volume" min="0" max="12" step="3">
+
+
+        <datalist id="tickmarks">
+            <option value="0" label="0"></option>
+            <option value="3"></option>
+            <option value="6" label="6"></option>
+            <option value="9"></option>
+            <option value="12" label="12"></option>
+        </datalist>
+
+
+        <audio controls id=audio loop=True volume="6">
+            <source src="./audio/sample.mp3" type="audio/mpeg">
+          </audio>
+
+
+
+          <script>
+
+                var volume = 0.5;
+
+                document.querySelector("#volume").onchange = function() {
+			    let Option= document.querySelector("#volume").value.trim();
+			    volume=Option/12;
+                console.log("Change")
+                document.querySelector("#audio").volume=volume
+		        }   
+
+
+
+
+          </script>
+    </body>
+
+
+</html>
