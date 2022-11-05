@@ -17,7 +17,7 @@ function BodyTracking(props) {
         // console.log("onResult")
         // Send tracking info
         if ('poseLandmarks' in results) {
-            const bodyTrack = results["poseLandmarks"][16]["x"];
+            const bodyTrack = results["poseLandmarks"][16];
             // console.log(results);
             setBodyTrack(bodyTrack);
         }
