@@ -8,20 +8,17 @@ import React, { useRef, useEffect, memo } from 'react'
 function BodyTracking(props) {
     const setBodyTrack = props.setBodyTrack;
     console.log("BodyTracking")
-    
+
     const webcamRef = useRef(null);  // Use ref to get each frame of video
     const canvasRef = useRef(null);
 
     function onResults(results) {
         // console.log("onResult")
         // Send tracking info if pose detected
-        if ('poseLandmarks' in results) {
-            const bodyTrack = results;
-            console.log(results);
-            setBodyTrack(bodyTrack);
-        }
-        // } else {
-        // }
+        // TODO: alert if no pose detected
+        const bodyTrack = results;
+        // console.log(results);
+        ("poseLandmarks" in bodyTrack && setBodyTrack(bodyTrack));
 
         canvasRef.current.width = webcamRef.current.video.videoWidth;
         canvasRef.current.height = webcamRef.current.video.videoHeight;
