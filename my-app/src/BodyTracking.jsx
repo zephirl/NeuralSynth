@@ -8,17 +8,16 @@ import React, { useRef, useEffect, memo } from 'react'
 function BodyTracking(props) {
     const setBodyTrack = props.setBodyTrack;
     console.log("BodyTracking")
-
+    
     const webcamRef = useRef(null);  // Use ref to get each frame of video
     const canvasRef = useRef(null);
-    var camera = null;
 
     function onResults(results) {
         // console.log("onResult")
-        // Send tracking info
+        // Send tracking info if pose detected
         if ('poseLandmarks' in results) {
-            const bodyTrack = results["poseLandmarks"][16];
-            // console.log(results);
+            const bodyTrack = results;
+            console.log(results);
             setBodyTrack(bodyTrack);
         }
         // } else {
@@ -67,6 +66,7 @@ function BodyTracking(props) {
     useEffect(() => {
 
         console.log("useEffect")
+        var camera = null;
 
         // Get model and initiate
         const holistic = new Holistic({
