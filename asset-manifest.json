@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/neuralsynth/static/css/main.c59cc657.css",
+    "main.js": "/neuralsynth/static/js/main.c199ec9f.js",
+    "static/js/787.28cb0dcd.chunk.js": "/neuralsynth/static/js/787.28cb0dcd.chunk.js",
+    "index.html": "/neuralsynth/index.html",
+    "main.c59cc657.css.map": "/neuralsynth/static/css/main.c59cc657.css.map",
+    "main.c199ec9f.js.map": "/neuralsynth/static/js/main.c199ec9f.js.map",
+    "787.28cb0dcd.chunk.js.map": "/neuralsynth/static/js/787.28cb0dcd.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.c59cc657.css",
+    "static/js/main.c199ec9f.js"
+  ]
+}
