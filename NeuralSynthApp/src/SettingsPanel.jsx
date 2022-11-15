@@ -6,21 +6,22 @@ import {
     DropdownMenu,
     DropdownItem,
     Button,
-    Progress,
     Col,
     Row,
 } from 'reactstrap';
 
+import ProgressBar from 'react-bootstrap/ProgressBar';
+
 import Tones from './Tones';
 
 
-// Scale a range of numbers from 0 to 100 for progress bar, not exact as buggy
+// Scale a range of numbers from 0 to 100 for progress bar
 function normalise(number, settings) {
     const value = (number - settings["inMin"]) * 100 / (settings["inMax"] - settings["inMin"]);
     if (value < 0) {
-        return 3;
+        return 0;
     } if (value > 100) {
-        return 99;
+        return 100;
     } else {
         return value;
     };
@@ -51,7 +52,7 @@ function ProgressValue(props) {
             <div className="m-2">
                 <div>{description}</div>
                 <Col xs="2">
-                    <Progress value={value} style={{ transition: "none" }} />
+                    <ProgressBar now={value} />
                 </Col>
             </div>
         </React.Fragment>
@@ -60,7 +61,7 @@ function ProgressValue(props) {
 
 
 function SettingsPanel(props) {
-    const { instrument, setInstrument, audioStatus, setAudioStatus, audioUpdate, setAudioUpdate, rightHandPos, rightHandOpenness, leftHandPos, leftHandOpenness } = props;
+    const { instrument, setInstrument, audioStatus, setAudioStatus, audioUpdate, rightHandPos, rightHandOpenness, leftHandPos, leftHandOpenness } = props;
 
     // Settings for each parameters, can be extended
     const audioSettingsRightHandY = { parameter: "frequency", inMin: 0, inMax: 1, outMin: 10, outMax: 600 }; // Frequency
@@ -90,7 +91,6 @@ function SettingsPanel(props) {
                     <div className="mb-1">Instrument (oscillator type):</div>
                     <InstrumentDropdown instrument={instrument} setInstrument={setInstrument} />
                 </Col>
-                {/* <Button className="m-2" onClick={() => setAudioUpdate(!audioUpdate)}> audioUpdate: {audioUpdate ? 'On' : 'Off'} </Button> */}
             </Row>
             <Tones audioSettingsRightHandY={audioSettingsRightHandY} rightHandPos={rightHandPos} rightHandOpenness={rightHandOpenness} leftHandPos={leftHandPos} leftHandOpenness={leftHandOpenness} audioStatus={audioStatus} instrument={instrument} audioUpdate={audioUpdate} />
         </React.Fragment>

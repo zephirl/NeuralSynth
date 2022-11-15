@@ -10,6 +10,8 @@ import {
 } from 'reactstrap';
 
 function NavigationBar(args) {
+  const { setOverlay } = args;
+
   const [isOpen, setIsOpen] = useState(false);
 
   const toggle = () => setIsOpen(!isOpen);
@@ -22,12 +24,14 @@ function NavigationBar(args) {
         <Collapse isOpen={isOpen} navbar>
           <Nav className="me-auto" navbar>
             <NavItem>
-              <NavLink href="https://github.com/zephirl">
+              <NavLink href="https://github.com/zephirl/NeuralSynth">
                 GitHub
               </NavLink>
             </NavItem>
             <NavItem>
-              <NavLink href="/about/">About</NavLink>
+              <NavLink onClick={() => setOverlay(true)} href="#">
+                Instructions
+              </NavLink>
             </NavItem>
           </Nav>
         </Collapse>

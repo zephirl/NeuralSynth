@@ -4,7 +4,6 @@ import * as Tone from "tone";
 
 
 function Tones(props) {
-    // console.log("tones", props);
     const { rightHandPos, rightHandOpenness, audioStatus, leftHandOpenness, leftHandPos, instrument, audioUpdate } = props;
     const osc = useMemo(() => new Tone.Oscillator(440, "sine").toDestination(), []); // useMemo to avoid creating new osc at each render
     const dist = useMemo(() => new Tone.Distortion(0).toDestination(), []);
@@ -44,7 +43,6 @@ function Tones(props) {
         // Change reverb with y position
         if ((0 < leftHandPos["y"]) && (leftHandPos["y"] < 1)) {
             reverb.set({decay: scale(leftHandPos["y"],0,1,0.1,10)});
-            // console.log(reverb.decay)
         };
 
         // Change volume with right hand openness
@@ -63,7 +61,7 @@ function Tones(props) {
         osc.set({ type: instrument })
     }, [instrument, osc]);
 
-    // test
+    // Useful during development to try new effects
     useEffect(() => {
 
         audioUpdate ?

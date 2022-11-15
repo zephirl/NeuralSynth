@@ -6,10 +6,10 @@ import { angleBetween3DCoords } from "./AngleBetween3PointsIn3DSpace";
 // More information about poseLandmarks here: https://google.github.io/mediapipe/solutions/pose.html
 export function getHandPos(poseLandmarks, hand) {
     return {
-        "x": (poseLandmarks[15 + hand]["x"] + poseLandmarks[17 + hand]["x"] + poseLandmarks[17 + hand]["x"]) / 3,
-        "y": (poseLandmarks[15 + hand]["y"] + poseLandmarks[17 + hand]["y"] + poseLandmarks[17 + hand]["y"]) / 3,
-        "z": (poseLandmarks[15 + hand]["z"] + poseLandmarks[17 + hand]["z"] + poseLandmarks[17 + hand]["z"]) / 3,
-        "visibility": (poseLandmarks[15 + hand]["visibility"] + poseLandmarks[17 + hand]["visibility"] + poseLandmarks[17 + hand]["visibility"]) / 3
+        "x": (poseLandmarks[15 + hand]["x"] + poseLandmarks[17 + hand]["x"] + poseLandmarks[21 + hand]["x"]) / 3,
+        "y": (poseLandmarks[15 + hand]["y"] + poseLandmarks[17 + hand]["y"] + poseLandmarks[21 + hand]["y"]) / 3,
+        "z": (poseLandmarks[15 + hand]["z"] + poseLandmarks[17 + hand]["z"] + poseLandmarks[21 + hand]["z"]) / 3,
+        "visibility": (poseLandmarks[15 + hand]["visibility"] + poseLandmarks[17 + hand]["visibility"] + poseLandmarks[21 + hand]["visibility"]) / 3
     };
 };
 

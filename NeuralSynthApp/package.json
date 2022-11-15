@@ -1,6 +1,7 @@
 {
-  "name": "my-app",
+  "name": "neuralsynth",
   "version": "0.1.0",
+  "homepage": "https://zephirl.github.io/NeuralSynth",
   "private": true,
   "dependencies": {
     "@mediapipe/camera_utils": "^0.3.1640029074",
@@ -11,7 +12,9 @@
     "bootstrap": "^5.2.2",
     "react": "^18.2.0",
     "react-audio-player": "^0.17.0",
+    "react-bootstrap": "^2.6.0",
     "react-dom": "^18.2.0",
+    "react-overlay-component": "^1.0.3",
     "react-scripts": "5.0.1",
     "react-webcam": "^7.0.1",
     "reactstrap": "^9.1.5",
@@ -19,6 +22,8 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
@@ -41,5 +46,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "gh-pages": "^4.0.0"
   }
 }

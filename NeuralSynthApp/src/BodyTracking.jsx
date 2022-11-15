@@ -6,18 +6,15 @@ import Webcam from 'react-webcam'
 import React, { useRef, useEffect, memo } from 'react'
 
 function BodyTracking(props) {
-    const setBodyTrack = props.setBodyTrack;
-    console.log("BodyTracking")
+    const { setBodyTrack, setInitialising } = props;
 
     const webcamRef = useRef(null);  // Use ref to get each frame of video
     const canvasRef = useRef(null);
 
     function onResults(results) {
-        // console.log("onResult")
         // Send tracking info if pose detected
         // TODO: alert if no pose detected
         const bodyTrack = results;
-        // console.log(results);
         ("poseLandmarks" in bodyTrack && setBodyTrack(bodyTrack));
 
         canvasRef.current.width = webcamRef.current.video.videoWidth;
@@ -61,8 +58,6 @@ function BodyTracking(props) {
     }
 
     useEffect(() => {
-
-        console.log("useEffect")
         var camera = null;
 
         // Get model and initiate
@@ -86,9 +81,12 @@ function BodyTracking(props) {
         holistic.onResults(onResults)
 
         if (typeof webcamRef.current !== "undefined" && webcamRef.current !== null) {
+            var sendCounter = 0;
             camera = new cam.Camera(webcamRef.current.video, {
                 onFrame: async () => {
-                    await holistic.send({ image: webcamRef.current.video })
+                    if (sendCounter === 1) setInitialising(false);
+                    await holistic.send({ image: webcamRef.current.video });
+                    sendCounter++;
                 },
                 width: 640,
                 height: 480
