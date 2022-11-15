@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/neuralsynth/static/css/main.c59cc657.css",
-    "main.js": "/neuralsynth/static/js/main.c199ec9f.js",
-    "static/js/787.28cb0dcd.chunk.js": "/neuralsynth/static/js/787.28cb0dcd.chunk.js",
-    "index.html": "/neuralsynth/index.html",
-    "main.c59cc657.css.map": "/neuralsynth/static/css/main.c59cc657.css.map",
-    "main.c199ec9f.js.map": "/neuralsynth/static/js/main.c199ec9f.js.map",
-    "787.28cb0dcd.chunk.js.map": "/neuralsynth/static/js/787.28cb0dcd.chunk.js.map"
+    "main.css": "/NeuralSynth/static/css/main.c59cc657.css",
+    "main.js": "/NeuralSynth/static/js/main.ff12a087.js",
+    "static/js/787.0da0d26c.chunk.js": "/NeuralSynth/static/js/787.0da0d26c.chunk.js",
+    "index.html": "/NeuralSynth/index.html",
+    "main.c59cc657.css.map": "/NeuralSynth/static/css/main.c59cc657.css.map",
+    "main.ff12a087.js.map": "/NeuralSynth/static/js/main.ff12a087.js.map",
+    "787.0da0d26c.chunk.js.map": "/NeuralSynth/static/js/787.0da0d26c.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.c59cc657.css",
-    "static/js/main.c199ec9f.js"
+    "static/js/main.ff12a087.js"
   ]
 }
