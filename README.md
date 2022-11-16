@@ -8,9 +8,9 @@ Thus, we created NeuralSynth, for anyone to start creating music, even without a
 
 <img width="500" alt="NeuralSynth" src="https://user-images.githubusercontent.com/10205873/201897023-811b9dfd-62dc-4d2b-aafd-66edd5429503.png">
 
-You can try our web-app here: https://zephirl.github.io/NeuralSynth. For the best experience, please use Google Chrome.
+You can try our web-app at https://zephirl.github.io/NeuralSynth. For the best experience, please use Google Chrome.
 
-Alternatively, a recorded demo video can be viewed here: https://rebrand.ly/NeuralSynthDemoVideo.
+Alternatively, a recorded demo video can be viewed [here](https://rebrand.ly/NeuralSynthDemoVideo).
 
 
 ## System structure
