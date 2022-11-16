@@ -19,5 +19,4 @@ The NeuralSynth system is composed of three main components. Namely, live pose e
 
 <img width="680" alt="System Structure-3" src="https://user-images.githubusercontent.com/10205873/202117268-3c62f726-9607-4ae4-9bec-36cacbddf3ae.png">
 
-To learn more, you can read our paper detailing this project here: https://rebrand.ly/NeuralSynthPaper
-
+To learn more, you can read our paper detailing NeuralSynth in this repo [here](NeuralSynth.pdf).
