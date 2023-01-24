@@ -1,5 +1,5 @@
-# NeuralSynth
-Make music with your body!
+# NeuralSynth A.I. - Make music uniquely you
+Express yourself, dance - our computer vision app will turn your body movements into music.
 
 ## Main idea
 We believe music is fundamental in our lives, to let us express our creativity, let go of tension and stress we might be feeling, and reconnect with ourselves and others.
